@@ -36,6 +36,12 @@ struct arp_entry {
     uint8_t mac[6];
 };
 
+typedef struct {
+	int interface;
+	char payload[MAX_PACKET_LEN];
+	size_t len;
+} packet;
+
 char *get_interface_ip(int interface);
 
 /**
